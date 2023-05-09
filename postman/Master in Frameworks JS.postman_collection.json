@@ -186,12 +186,12 @@
 					"urlencoded": [
 						{
 							"key": "title",
-							"value": "Segundo Articulo",
+							"value": "septimo Articulo",
 							"type": "text"
 						},
 						{
 							"key": "content",
-							"value": "Contenido del segundo articulo",
+							"value": "Contenido del septimo articulo",
 							"type": "text"
 						}
 					]
@@ -280,6 +280,83 @@
 					"body": "{\n    \"status\": \"sucess\",\n    \"message\": \"El articulo se ha guardado!\",\n    \"articleStored\": {\n        \"_id\": \"6459dc690fe4471ce550cc9a\",\n        \"date\": \"2023-05-09T05:38:49.869Z\",\n        \"title\": \"Segundo Articulo\",\n        \"content\": \"Contenido del segundo articulo\",\n        \"__v\": 0\n    }\n}"
 				}
 			]
+		},
+		{
+			"name": "GET find Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3900/api/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET one Article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3900/api/article/645a6f28be7e65d929bb3189",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"article",
+						"645a6f28be7e65d929bb3189"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST update Article",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "MY TITLE UPDATED",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "MY CONTENT UPDATED",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3900/api/article/645a6f28be7e65d929bb3189",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"article",
+						"645a6f28be7e65d929bb3189"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

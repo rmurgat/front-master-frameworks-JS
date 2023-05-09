@@ -6,11 +6,14 @@ const articleService = require('../service/articleService');
 
 var router = express.Router();
 
-// rutas de prueba
+// test paths
 router.get('/test-de-controlador', articleService.test);
 router.post('/datos-curso', articleService.datosCurso);
 
-// rutas utiles
+// usefull paths
 router.post('/save', ArticleService.save);
+router.get('/articles/:last?', ArticleService.getArticles);
+router.get('/article/:id', ArticleService.getArticle);
+router.put('/article/:id', ArticleService.update);
 
 module.exports = router;

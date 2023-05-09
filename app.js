@@ -1,25 +1,25 @@
 'use strict'
 
-// cargar modulos de node para crear servidor
+// loading modules from node to create http server
 var express = require('express');
 var bodyParser = require('body-parser');
 
-// ejecutar express (http)
+// express execution  (http)
 var app = express();
 
-// cargar ficheros rutas
+// load paths from file
 var article_routes = require('./controller/restcontroller')
 
 // middlewares
 app.use(bodyParser.urlencoded({extended:false}))
-app.use(bodyParser.json());              // convierte cualquier petición que llegue a formato JSON
+app.use(bodyParser.json());              // convert any request comming to JSON format
 
 // CORS
 
-// añadir prefijos a rutas
+// add pre-string to paths
 app.use('/api', article_routes);
 
-// ruta o metodo de prueba para el API REST
+// path and test method to API REST
 // rmt - this is an old version to test [express] without router
 /* 
 app.get('/test1', (req, res) => {
@@ -48,5 +48,5 @@ app.get('/test3', (req, res) => {
 });
 */
 
-// exportar modulo (fichero actual)
+// exportr module (this file)
 module.exports = app;
