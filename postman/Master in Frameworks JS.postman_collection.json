@@ -357,6 +357,100 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "DELETE one Article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3900/api/article/645a6f28be7e65d929bb3189",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"article",
+						"645a6f28be7e65d929bb3189"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST upload Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file0",
+							"type": "file",
+							"src": "/home/ruben/Pictures/wiki-mongodb-studio3t-icon.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3900/api/upload-image/645a6f31be7e65d929bb318b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"upload-image",
+						"645a6f31be7e65d929bb318b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET one Image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3900/api/get-image/QbPB2OjAMj5TBx-m5wmlRdu3.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"get-image",
+						"QbPB2OjAMj5TBx-m5wmlRdu3.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET search Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3900/api/search/sss",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"search",
+						"sss"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
