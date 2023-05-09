@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "b6366dc7-8339-4adf-a964-e2eb8969919f",
+		"name": "Master in Frameworks JS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7489488"
+	},
+	"item": [
+		{
+			"name": "test POST router",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "hola",
+							"value": "Que tal",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3900/api/datos-curso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"datos-curso"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "hola",
+									"value": "Que tal",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/datos-curso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"datos-curso"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6d-XvaQx2Q4wFxjrEGuGyDnDefKumk\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 May 2023 04:50:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"curso\": \"Master en Frameworks js\",\n    \"autor\": \"Ruben Murga\",\n    \"url\": \"https://github.com/rmurgat\",\n    \"hola\": \"Que tal\"\n}"
+				}
+			]
+		},
+		{
+			"name": "test GET router",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3900/api/test-de-controlador",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"test-de-controlador"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3900/api/test-de-controlador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"test-de-controlador"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-VTPYVtN7BtUAZnofGfEPNl1ZiMo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 May 2023 04:51:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Soy la accion test de mi servicio de articulos\"\n}"
+				}
+			]
+		},
+		{
+			"name": "POST save Article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Segundo Articulo",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Contenido del segundo articulo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3900/api/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3900",
+					"path": [
+						"api",
+						"save"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Segundo Articulo",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Contenido del segundo articulo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3900/api/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3900",
+							"path": [
+								"api",
+								"save"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "222"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"de-e9Zl/jUYzrW6ocfQ4T5rq4YF2g8\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 May 2023 05:38:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"sucess\",\n    \"message\": \"El articulo se ha guardado!\",\n    \"articleStored\": {\n        \"_id\": \"6459dc690fe4471ce550cc9a\",\n        \"date\": \"2023-05-09T05:38:49.869Z\",\n        \"title\": \"Segundo Articulo\",\n        \"content\": \"Contenido del segundo articulo\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}
