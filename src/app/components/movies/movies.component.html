@@ -1,3 +1,39 @@
-<h1>{{title}}</h1>
-<p>movies works!</p>
-<button (click)="changeTitle()">click me</button>
+<h1 class="subheader">Movies</h1>
+<h2>{{title}}</h2>
+<button (click)="changingTitle()">Click on me</button>
+<hr/>
+<h2>Show First Movie</h2>
+{{movies[0].title}}
+<hr/>
+<h2>Show movie counter: {{movies.length}}</h2>
+<div *ngIf="movies.length <=3">
+    There few few movies
+</div>
+<div *ngIf="movies.length >3">
+    There are a lot of movies
+</div>
+<hr/>
+<section id="content">
+    <h2 class="subheader">Movies list</h2>
+
+    <!--Listado articulos-->
+    <div id="articles"  *ngIf="movies">
+        <article class="article-item" *ngFor="let movie of movies; let i = index">
+            <div class="image-wrap">
+                <img src="{{movie.image}}" alt="{{movie.title}}" />
+            </div>
+
+            <h2>{{i}} {{movie.title}}</h2>
+            <span class="date">
+                Hace 5 minutos
+            </span>
+            <a href="#">Leer más</a>
+
+            <div class="clearfix"></div>
+        </article>
+
+        <!--AÑADIR ARTICULOS VIA JS-->
+
+    </div>
+    
+</section>
