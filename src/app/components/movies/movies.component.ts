@@ -10,6 +10,8 @@ export class MoviesComponent {
   public title: string;
   public movies: Array<any>;
   public movies2: Movie[];
+  public favorite: Movie | undefined;
+  public mydate: any;
 
   constructor() {
     this.title = 'Lord of the ring',
@@ -25,10 +27,14 @@ export class MoviesComponent {
       new Movie('Batman vs Superman', 2015, "./assets/images/img-movie-batmanVssuperman.jpeg"),
       new Movie('Aquaman', 2011, "./assets/images/img-movie-aquaman.jpeg")
     ];
-
+    this.mydate = new Date(2020, 8, 12);
   }
 
   changingTitle = () => {
-    this.title = "JAWS"
+    this.title = "JAWS";
+  }
+
+  showFavorites(event: any) {
+    this.favorite =  event.movie;
   }
 }

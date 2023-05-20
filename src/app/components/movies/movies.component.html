@@ -5,7 +5,16 @@
 <div class="center">
     <section id="content">
 
+        <div id="favorita" *ngIf="favorite">
+            <h2 class="subheader">Favorite Movie</h2>
+            <h4>{{favorite.title | lowercase}}</h4>
+            <h4>{{favorite.year | ispair}}</h4>
+            <h5>{{this.mydate | date:'dd/MM/yyyy'}}</h5>
+        </div>
+
+
         <h1 class="subheader">Movies</h1>
+        <!--        
         <h2>{{title}}</h2>
         <button (click)="changingTitle()">Click on me</button>
         <hr />
@@ -19,13 +28,15 @@
         <div *ngIf="movies.length >3">
             There are a lot of movies
         </div>
+    -->
         <hr />
         <section id="content">
             <h2 class="subheader">Movies list (static from object-array)</h2>
             <!--Movies list-->
             <div id="articles" *ngIf="movies2">
                 <div *ngFor="let movie of movies2; let i = index">
-                    <app-movie [movie]="movie"></app-movie>
+                    <app-movie [movie]="movie" (add2favorite)="showFavorites($event)">
+                    </app-movie>
                 </div>
             </div>
 

@@ -14,6 +14,7 @@ import { Page1Component } from './components/page1/page1.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { ErrorComponent } from './components/error/error.component';
 import { MovieComponent } from './components/movie/movie.component';
+import { IsPairPipe } from './pipes/ispair.pipe';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MovieComponent } from './components/movie/movie.component';
     MoviesComponent,
     ErrorComponent,
     MovieComponent,
+    IsPairPipe
   ],
   imports: [
     BrowserModule,
