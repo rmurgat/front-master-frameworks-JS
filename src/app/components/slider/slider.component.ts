@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent {
+
+  @Input()
+  public welcomeText: string | undefined;
+  @Input()
+  public size: string | undefined;
+
+  constructor() {
+
+  }
 
 }

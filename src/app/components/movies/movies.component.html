@@ -1,39 +1,59 @@
-<h1 class="subheader">Movies</h1>
-<h2>{{title}}</h2>
-<button (click)="changingTitle()">Click on me</button>
-<hr/>
-<h2>Show First Movie</h2>
-{{movies[0].title}}
-<hr/>
-<h2>Show movie counter: {{movies.length}}</h2>
-<div *ngIf="movies.length <=3">
-    There few few movies
-</div>
-<div *ngIf="movies.length >3">
-    There are a lot of movies
-</div>
-<hr/>
-<section id="content">
-    <h2 class="subheader">Movies list</h2>
+<app-slider [welcomeText]="'Movies'" [size]="'small'">
+</app-slider>
 
-    <!--Listado articulos-->
-    <div id="articles"  *ngIf="movies">
-        <article class="article-item" *ngFor="let movie of movies; let i = index">
-            <div class="image-wrap">
-                <img src="{{movie.image}}" alt="{{movie.title}}" />
+<!-- start the working area -->
+<div class="center">
+    <section id="content">
+
+        <h1 class="subheader">Movies</h1>
+        <h2>{{title}}</h2>
+        <button (click)="changingTitle()">Click on me</button>
+        <hr />
+        <h2>Show First Movie</h2>
+        {{movies[0].title}}
+        <hr />
+        <h2>Show movie counter: {{movies.length}}</h2>
+        <div *ngIf="movies.length <=3">
+            There few few movies
+        </div>
+        <div *ngIf="movies.length >3">
+            There are a lot of movies
+        </div>
+        <hr />
+        <section id="content">
+            <h2 class="subheader">Movies list (static from object-array)</h2>
+            <!--Movies list-->
+            <div id="articles" *ngIf="movies2">
+                <div *ngFor="let movie of movies2; let i = index">
+                    <app-movie [movie]="movie"></app-movie>
+                </div>
             </div>
 
-            <h2>{{i}} {{movie.title}}</h2>
-            <span class="date">
-                Hace 5 minutos
-            </span>
-            <a href="#">Leer más</a>
+            <h2 class="subheader">Movies list (static from array)</h2>
+            <!--Movies list-->
+            <div id="articles" *ngIf="movies">
+                <article class="article-item" *ngFor="let movie of movies; let i = index">
+                    <div class="image-wrap">
+                        <img src="{{movie.image}}" alt="{{movie.title}}" />
+                    </div>
+                    <h2>{{i}} {{movie.title}}</h2>
+                    <span class="date">
+                        Hace 5 minutos
+                    </span>
+                    <span class="year" [ngClass]="{
+                               'year-green':movie.year>2016,
+                               'year-red':movie.year<2016
+                               }">
+                        {{movie.year}}
+                    </span>
+                    <a href="#">Leer más</a>
 
-            <div class="clearfix"></div>
-        </article>
+                    <div class="clearfix"></div>
+                </article>
+            </div>
+        </section>
 
-        <!--AÑADIR ARTICULOS VIA JS-->
-
-    </div>
-    
-</section>
+    </section>
+    <app-sidebar></app-sidebar>
+    <div class="clearfix"></div>
+</div>

@@ -1,10 +1,32 @@
-<h1 class="subheader">Page 1</h1>
-<div *ngIf="name || lastname">
-    <div *ngIf="name">
-        <h2>name is: {{name}}</h2>
-    </div>
-    <div *ngIf="lastname">
-        <h2>lastname is: {{lastname}}</h2>
-    </div>
+<app-slider [welcomeText]="'My Page to Tests No. 1'">
+</app-slider>
+
+<!-- start the working area -->
+<div class="center">
+    <section id="content">
+
+        <h1 class="subheader">Page 1</h1>
+
+        <div *ngIf="name || lastname; then ExistParams else DonotExistParams">
+        </div>
+
+        <ng-template #ExistParams>
+            <div *ngIf="name">
+                <h2>name is: {{name}}</h2>
+            </div>
+
+            <div *ngIf="lastname">
+                <h2>lastname is: {{lastname}}</h2>
+            </div>
+
+        </ng-template>
+
+        <ng-template #DonotExistParams>
+            <h2>There is not parameters</h2>
+        </ng-template>
+
+        <p>page1 works!</p>
+    </section>
+    <app-sidebar></app-sidebar>
+    <div class="clearfix"></div>
 </div>
-<p>page1 works!</p>

@@ -13,6 +13,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { Page1Component } from './components/page1/page1.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { ErrorComponent } from './components/error/error.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ErrorComponent } from './components/error/error.component';
     Page1Component,
     MoviesComponent,
     ErrorComponent,
+    MovieComponent,
   ],
   imports: [
     BrowserModule,
