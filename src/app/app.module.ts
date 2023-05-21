@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from './app.routing';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -35,7 +36,8 @@ import { IsPairPipe } from './pipes/ispair.pipe';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
