@@ -14,13 +14,10 @@ export class ArticleService {
     ) {
         this.url = Global.url;
     }
-
     helloworld() {
         return "Hello World from [ArticleService] Angular Service "
     }
-
     getArticles(): Observable<any> {
         return this._http.get(this.url+'articles');
     }
-
 }
