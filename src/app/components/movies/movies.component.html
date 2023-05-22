@@ -31,7 +31,18 @@
     -->
         <hr />
         <section id="content">
-            <h2 class="subheader">Movies list (static from object-array)</h2>
+
+            <h3 class="subheader">Movies list (from dummy-angular-service)</h3>
+            <!--Movies list-->
+            <div id="articles" *ngIf="movies3">
+                <div *ngFor="let movie of movies3; let i = index">
+                    <app-movie [movie]="movie" (add2favorite)="showFavorites($event)">
+                    </app-movie>
+                </div>
+            </div>
+
+
+            <h3 class="subheader">Movies list (static from object-array)</h3>
             <!--Movies list-->
             <div id="articles" *ngIf="movies2">
                 <div *ngFor="let movie of movies2; let i = index">
@@ -40,7 +51,7 @@
                 </div>
             </div>
 
-            <h2 class="subheader">Movies list (static from array)</h2>
+            <h3 class="subheader">Movies list (static from array)</h3>
             <!--Movies list-->
             <div id="articles" *ngIf="movies">
                 <article class="article-item" *ngFor="let movie of movies; let i = index">

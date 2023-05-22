@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie } from '../../models/movie';
+import { MovieService } from '../../services/movie.service';
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.css']
+  styleUrls: ['./movies.component.css'],
+  providers: [ MovieService ]
 })
 export class MoviesComponent {
   public title: string;
   public movies: Array<any>;
   public movies2: Movie[];
+  public movies3: Movie[];
   public favorite: Movie | undefined;
   public mydate: any;
+  private _movieService: MovieService;
 
   constructor() {
     this.title = 'Lord of the ring',
@@ -28,6 +32,12 @@ export class MoviesComponent {
       new Movie('Aquaman', 2011, "./assets/images/img-movie-aquaman.jpeg")
     ];
     this.mydate = new Date(2020, 8, 12);
+    this._movieService = new MovieService;
+    this.movies3 = this._movieService.getMoviesList();
+  }
+
+  ngOnInit() {
+    console.log(this._movieService.helloworld());
   }
 
   changingTitle = () => {
