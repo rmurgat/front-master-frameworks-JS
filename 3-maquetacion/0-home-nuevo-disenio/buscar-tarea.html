@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Maquetación para el Master en Frameworks JavaScript</title>
+
+    <!-- HOJA DE ESTILOS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <script type="text/JavaScript">
+            window.addEventListener("load", function(){
+                var template = document.getElementById("article-template");
+                var articles = document.getElementById("articles");
+                for(var i=1; i<=5; i++) {
+                    var clonado = template.cloneNode(true);
+                    clonado.removeAttribute("id");
+                    var h2 = clonado.getElementsByTagName("h2")[0];
+                    h2.innerHTML = h2.textContent + " " + i;
+                    articles.appendChild(clonado);
+                }
+            });
+        </script>
+</head>
+
+<body>
+    <header id="header">
+
+        <div class="left-full-layout">
+            <!-- LOGO -->
+            <div id="logo">
+                <img src="./assets/images/hanygen_home_logo.jpg" class="app-logo" alt="Logotipo" />
+                <span id="brand">
+                    <strong>Home</strong>Page
+                </span>
+            </div>
+            <!-- MENU-->
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="./index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">Tareas</a>
+                    </li>
+                    <li>
+                        <a href="./formulario.html">Folders</a>
+                    </li>
+                    <li>
+                        <a href="#">Mapas</a>
+                    </li>
+                    <li>
+                        <a href="#">Tarjetas</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- limpiar flotados -->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <!--    <div id="slider" class="slider-big">
+        <h1>Bienvenido al curso de Angular</h1>
+        <a href="#" class="btn-white">Ir al Blog</a>
+    </div> -->
+
+    <div class="left-full-layout">
+        <aside id="menubar">
+            <div id="search" class="menubar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra la tarea que buscas</p>
+                <form>
+                    <input type="text" name="search" />
+                    <input type="submit" name="submit" value="buscar" class="btn" />
+                </form>
+            </div>
+            <menu>
+                <li><a href="#">Manto Agendas</a></li>
+                <li><a href="buscar-tarea.html">Busqueda Avanzada</a></li>
+                <li><a href="#">Tareas hasta el día de hoy</a></li>
+            </menu>
+        </aside>
+
+        <section id="content">
+            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" bordercolor="#EAEAEA">
+                <tr>
+                    <td>
+                        <div class="InteriorContenidoGeneral">Nombre</div>
+                    </td>
+                    <td colspan="3"><input type="text" name="txtnombre" size="40" class="InteriorContenidoGeneral"
+                            value=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="InteriorContenidoGeneral">Tipo de Tarea</div>
+                    </td>
+                    <td>
+                        <select name="cbotipo" class="InteriorContenidoGeneral">
+                            <option value=""></option>
+                            <option value="$E">PAGAR $</option>
+                            <option value="1C">CUMPLEAÑOS</option>
+                            <option value="AR">[ARCHIVADO]</option>
+                            <option value="FI">DIA FESTIVO</option>
+                            <option value="GR">GRUPO</option>
+                            <option value="RE">REUNIÓN</option>
+                            <option value="SE">SEGUIMIENTO</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="InteriorContenidoGeneral">Tarea Padre</div>
+                    </td>
+                    <td>
+                        <select name="cbopadre" class="InteriorContenidoGeneral">
+                            <option value=""></option>
+                            <option value="249">DISEÑO GRÁFICO</option>
+                            <option value="187">GRUPO RESPALDOS SOFTWARE</option>
+                            <option value="360">GRUPO TAPIA</option>
+                            <option value="209">GRUPO HANY SISTEMAS</option>
+                            <option value="216">SYS GENARO</option>
+                            <option value="214">SYS CONTABILIDAD</option>
+                            <option value="212">SYS MI AGENDA</option>
+                            <option value="211">SYS CENTRO ESCOLAR VIRTUAL</option>
+                            <option value="163">REMOLQUE</option>
+                            <option value="368">OTRAS FESTIVIDADES</option>
+                            <option value="373">GRUPO MURGA</option>
+                            <option value="267">SYS GENERO-RESEARCH.ORG</option>
+                            <option value="275">SYS FACTORY PRODUCTION</option>
+                            <option value="273">SYS MECHANICAL MANAGER</option>
+                            <option value="175">DODGE JOURNEY</option>
+                            <option value="173">JEEP WAGONEER</option>
+                            <option value="177">MUSTANG (mike)</option>
+                            <option value="142">OLINALÁ</option>
+                            <option value="180">CHEVELLE 68</option>
+                            <option value="202">JEEP J10</option>
+                            <option value="600">GRUPO MI MAMA</option>
+                            <option value="199">TAXQUEÑA, CDMX</option>
+                            <option value="198">NEXTITLA, CDMX</option>
+                            <option value="197">CUAJIMALPA, CDMX</option>
+                            <option value="209">MORELOS</option>
+                            <option value="116">TELECOM</option>
+                            <option value="224">SENTRA 2013 (Karet)</option>
+                            <option value="10">
+                                <div style=color:red><b>SEARCHING NEW JOB</b></div>
+                            </option>
+                            <option value="256">GRUPO DIONICIO</option>
+                            <option value="110">GRUPO LAPTOP</option>
+                            <option value="50">RENTAS CHILPANCINGO</option>
+                            <option value="186">GRUPO VENTAS</option>
+                            <option value="303">GRUPO SALUD</option>
+                            <option value="153">MI PREPARACION DEPORTIVA</option>
+                            <option value="92">CIUDAD DE MÉXICO</option>
+                            <option value="246">GRUPO DENTISTA</option>
+                            <option value="196">GRUPO Nuevos Proyectos</option>
+                            <option value="137">BUELL</option>
+                            <option value="259">GRUPO MASCOTAS</option>
+                            <option value="152">APARATOS DEPORTE</option>
+                            <option value="55">CUAJIMALPA</option>
+                            <option value="243">GRUPO REUNION CUATES</option>
+                            <option value="192">GRUPO w3.hanygen.com</option>
+                            <option value="258">GRUPO MI FAMILIA</option>
+                            <option value="54">ACAPULCO</option>
+                            <option value="237">GRUPO CUMPLEAÑOS</option>
+                            <option value="188">GRUPO CONTABILIDAD</option>
+                            <option value="257">GRUPO MURGA TAPIA</option>
+                            <option value="111">GRUPO DESKTOP</option>
+                            <option value="53">CHILPANCINGO</option>
+                            <option value="236">GRUPO SALUDOS</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="InteriorContenidoGeneral">Fecha Desde</div>
+                    </td>
+                    <td>
+                        <input type="text" name="txtfhdesde" size="10" class="InteriorContenidoGeneral" value="">
+                        <a href="#" name="anchor_fhdesde"
+                            onclick="ocalendar.select(document.frmistareas.txtfhdesde, 'anchor_fhdesde','yyyy-MM-dd')"><img
+                                src="html/images/btnCalendar.gif" border="0"></a>
+                    </td>
+                    <td>
+                        <div class="InteriorContenidoGeneral">Hasta</div>
+                    </td>
+                    <td>
+                        <input type="text" name="txtfhasta" size="10" class="InteriorContenidoGeneral" value="">
+                        <a href="#" name="anchor_fhasta"
+                            onclick="ocalendar.select(document.frmistareas.txtfhasta, 'anchor_fhasta','yyyy-MM-dd')"><img
+                                src="html/images/btnCalendar.gif" border="0"></a>
+                    </td>
+                </tr>
+            </table>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="btnbuscar" value=" Buscar " class="InteriorContenidoGeneral"
+                        onclick="javascript:buscar();">
+                    <input type="button" name="btnsalir" value=" Salir " class="InteriorContenidoGeneral"
+                        onclick="javascript:salir();">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" bordercolor="#EAEAEA">
+                        <tr>
+                            <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr valign="top" bgcolor="#EAEAEA">
+                                        <td colspan="9" valign="middle">
+                                            <div align="left" style="margin-top:11px; margin-left:2px;"
+                                                class="lnkNL-001"><b>Tareas</div>
+                                            <div align="left" style="margin-top:-11px;" class="lnkNL-007"><b>Tareas
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="9">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td nowrap>
+                                            <div align="left" class="tblNL-002">Fecha</th>
+                                        </td>
+                                        <td nowrap>
+                                            <div align="left" class="tblNL-002">Agenda</th>
+                                        </td>
+                                        <td nowrap>
+                                            <div align="left" class="tblNL-002">Nombre</th>
+                                        </td>
+                                        <td nowrap>
+                                            <div align="center" class="tblNL-002">Modificar</th>
+                                        </td>
+                                        <td nowrap>
+                                            <div align="center" class="tblNL-002">Recorrer</th>
+                                        </td>
+                                        <td nowrap>
+                                            <div align="center" class="tblNL-002">Eliminar</th>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            </table>
+        </section>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <footer id="footer">
+        <div class="left-full-layout">
+            <p>
+                &copy; Master en frameworks de JavaScrip de Victor Robles
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

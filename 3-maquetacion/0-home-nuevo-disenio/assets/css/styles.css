@@ -13,11 +13,17 @@ body {
     width: 100%;
     background: white;
     border-bottom: 1px solid #ccc;
-    border-top: 5px solid #d3253c
+    border-top: 5px solid hsl(36, 85%, 55%)
 }
+
 
 .center {
     width: 75%;
+    margin: 0px auto;
+}
+
+.left-full-layout {
+    width: 100%;
     margin: 0px auto;
 }
 
@@ -30,13 +36,13 @@ body {
     width: 30%;
     font-size: 30px;
     float: left;
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
 #logo img {
     display: block;
     float: left;
-    height: 60px;
+    height: 100px;
     margin-top: -9px;
     margin-right: 10px;
     animation: latir infinite 30s linear;
@@ -93,7 +99,7 @@ body {
 }
 
 #menu a:hover {
-    color: #d3253c;
+    color: #d48b1e;
 }
 
 #slider {
@@ -152,6 +158,33 @@ body {
     float: left;
     min-height: 650px;
     margin-right: 20px;
+}
+
+#menubar {
+    width: 15%;
+    float: left;
+    padding-top: 60px;    
+}
+
+.menubar-item {
+    background: #f7f7f7;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.menubar-item h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #eee;
+}
+
+.menubar-item .btn {
+    margin-top: 10px;
+    margin: 0px auto;
+    margin-top: 10px;
 }
 
 #sidebar {
@@ -338,10 +371,10 @@ textarea {
 
 /* RESPONSIVE */
 
-/* Desde la anchura 0px hasta la anchura 1488px de pantalla*/
+/* Desde la anchura 0px hasta la anchura 1488px de pantalla*
 @media (max-width: 1400px) {
 
-    /*Se ejecutarán estos estilos*/
+    *Se ejecutarán estos estilos*
     .center {
         width: 85%;
     }
@@ -352,10 +385,10 @@ textarea {
 
 @media (max-width: 1200px) {
 
-    /*Se ejecutarán estos estilos*/
+    *Se ejecutarán estos estilos*
     #logo {
         float: none;
-        /*width: 240px;*/
+        *width: 240px;*
         margin: 0px auto;
         margin-top: 20px;
     }
@@ -372,7 +405,7 @@ textarea {
 }
 
 @media (max-width: 700px) {
-    /*Se ejecutarán estos estilos*/
+    *Se ejecutarán estos estilos*
 
     #content {
         float: none;
@@ -399,4 +432,4 @@ textarea {
     .mid-form {
         width: 70%;
     }
-}
+}*/

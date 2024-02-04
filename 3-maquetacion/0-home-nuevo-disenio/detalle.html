@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Maquetación para el Master en Frameworks JavaScript</title>
+
+    <!-- HOJA DE ESTILOS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <script type="text/JavaScript">
+            window.addEventListener("load", function(){
+                var template = document.getElementById("article-template");
+                var articles = document.getElementById("articles");
+                for(var i=1; i<=5; i++) {
+                    var clonado = template.cloneNode(true);
+                    clonado.removeAttribute("id");
+                    var h2 = clonado.getElementsByTagName("h2")[0];
+                    h2.innerHTML = h2.textContent + " " + i;
+                    articles.appendChild(clonado);
+                }
+            });
+        </script>
+</head>
+
+<body>
+    <header id="header">
+
+        <div class="left-full-layout">
+            <!-- LOGO -->
+            <div id="logo">
+                <img src="./assets/images/hanygen_home_logo.jpg" class="app-logo" alt="Logotipo" />
+                <span id="brand">
+                    <strong>Home</strong>Page
+                </span>
+            </div>
+            <!-- MENU-->
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="./index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">Tareas</a>
+                    </li>
+                    <li>
+                        <a href="./formulario.html">Folders</a>
+                    </li>
+                    <li>
+                        <a href="#">Mapas</a>
+                    </li>
+                    <li>
+                        <a href="#">Tarjetas</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- limpiar flotados -->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+    <!--    <div id="slider" class="slider-big">
+        <h1>Bienvenido al curso de Angular</h1>
+        <a href="#" class="btn-white">Ir al Blog</a>
+    </div> -->
+
+    <div class="left-full-layout">
+        <aside id="menubar">
+            <div id="search" class="menubar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra la tarea que buscas</p>
+                <form>
+                    <input type="text" name="search" />
+                    <input type="submit" name="submit" value="buscar" class="btn" />
+                </form>
+            </div>
+            <menu>
+                <li><a href="#">Manto Agendas</a></li>
+                <li><a href="buscar-tarea.html">Busqueda Avanzada</a></li>
+                <li><a href="#">Tareas hasta el día de hoy</a></li>
+            </menu>
+        </aside>
+
+        <section id="content">
+            <table width="748" border="0" cellspacing="0" cellpadding="0">
+                <tr height="100%">
+                    <td valign="top">
+                        <table width="536" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <table width="689" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td colspan="4" class="InteriorContenidoTextoTitulo">Modificaciónn de una
+                                                tarea<br></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <div class="confirmation"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="InteriorContenidoGeneral">Agenda:</div>
+                                            </td>
+                                            <td colspan="3">
+                                                <div class="InteriorContenidoGeneral"><a
+                                                        href="javascript:gotareas();">PERSONALES</a></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="InteriorContenidoGeneral">Nombre:</div>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="txtnombre" size="35"
+                                                    class="InteriorContenidoGeneral" maxlength="255"
+                                                    value="CONSULTA CON URÓLOGO">
+                                            </td>
+                                            <td>
+                                                <div class="InteriorContenidoGeneral">Estatus:</div>
+                                            </td>
+                                            <td>
+                                                <select name="cboestatus" class="InteriorContenidoGeneral">
+                                                    <option value="PE" selected>Tarea Pendiente</option>
+                                                    <option value="TE">Tarea Terminada</option>
+                                                    <option value="CA">Tarea Cancelada</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="InteriorContenidoGeneral">Tipo de tarea:</div>
+                                            </td>
+                                            <td>
+                                                <select name="cbotipo" class="InteriorContenidoGeneral">
+                                                    <option value=""></option>
+                                                    <option value="$E">PAGAR $</option>
+                                                    <option value="1C">CUMPLEAÑOS</option>
+                                                    <option value="AR">[ARCHIVADO]</option>
+                                                    <option value="FI">DIA FESTIVO</option>
+                                                    <option value="GR">GRUPO</option>
+                                                    <option value="RE">REUNIÓN</option>
+                                                    <option value="SE" selected>SEGUIMIENTO</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <div class="InteriorContenidoGeneral">Tarea padre:</div>
+                                            </td>
+                                            <td>
+                                                <div class="InteriorContenidoGeneral">GRUPO SALUD</div>
+                                            </td>
+                                        </tr>
+                                        <td>
+                                            <div class="InteriorContenidoGeneral">Fecha de ejecución:</div>
+                                        </td>
+                                        <td>
+                                            <input type="date" name="txtfhejecucion" id=idfhejecucion size="10"
+                                                class="InteriorContenidoGeneral" value="2014-12-07">
+                                        </td>
+                            </tr>
+                            <tr valign="top" bgcolor="#EAEAEA">
+                                <td width="100%" colspan="4" valign="middle">
+                                    <div align="left" style="margin-top:11px; margin-left:2px;" class="lnkNL-001">
+                                        <b>Contacto</div>
+                                    <div align="left" style="margin-top:-11px;" class="lnkNL-007"><b>Contacto</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="InteriorContenidoGeneral">Nombre Contacto:</div>
+                                </td>
+                                <td>
+                                    <input type="text" name="txtcontacto" size="35" maxlength="60"
+                                        class="InteriorContenidoGeneral" value="Dr. Donaciano Flores">
+                                </td>
+                                <td>
+                                    <div class="InteriorContenidoGeneral">Email:</div>
+                                </td>
+                                <td>
+                                    <input type="text" name="txtmailcontacto" size="35" maxlength="255"
+                                        class="InteriorContenidoGeneral" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="InteriorContenidoGeneral">Número de teléfono:</div>
+                                </td>
+                                <td>
+                                    <input type="text" name="txttelefono" size="20" maxlength="20"
+                                        class="InteriorContenidoGeneral" value="">
+                                </td>
+                                <td>
+                                    <div class="InteriorContenidoGeneral">Móvil:</div>
+                                </td>
+                                <td>
+                                    <input type="text" name="txtmovil" size="20" maxlength="20"
+                                        class="InteriorContenidoGeneral" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="InteriorContenidoGeneral">Hora comprometida:</div>
+                                </td>
+                                <td>
+                                    <input type="text" name="txthora" size="10" class="InteriorContenidoGeneral"
+                                        maxlength="10" value="">
+                                </td>
+                                <td>
+                                    <div class="InteriorContenidoGeneral">URL:</div>
+                                </td>
+                                <td>
+                                    <input type="text" name="txturl" size="35" class="InteriorContenidoGeneral"
+                                        maxlength="255" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td valign="top">
+                                    <div class="InteriorContenidoGeneral">Comentario:</div>
+                                </td>
+                                <td colspan="2">
+                                    <textarea name="txcomment" rows="6" cols="40"
+                                        class="InteriorContenidoGeneral">Programar una consulta con el Dr. Donaciano Flores</textarea>
+                                </td>
+                                <td>
+                                    <table border="0" width="100%">
+                                        <tr>
+                                            <td>
+                                                <div class="InteriorContenidoGeneral">Recorrer:</div>
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" name="chkrecorre" value="AC" checked>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:recorre();"><img src="html/images/iconlast.gif"
+                                                        border="0" alt="Recorrer tarea"></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="InteriorContenidoGeneral">Intervalo:</div>
+                                            </td>
+                                            <td>
+                                                <select name="cbointervalo" class="InteriorContenidoGeneral">
+                                                    <option value=""></option>
+                                                    <option value="DD">Día</option>
+                                                    <option value="MM" selected>Mes</option>
+                                                    <option value="YY">Año</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="txtintervalo" value="6" size="3"
+                                                    class="InteriorContenidoGeneral">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" align="center">
+                                    <input type="button" name="btnupd" value=" Modificar "
+                                        class="InteriorContenidoGeneral" onclick="javascript:update();">
+                                    <input type="button" name="btnsalir" value=" Salir "
+                                        class="InteriorContenidoGeneral" onclick="javascript:salir();">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+
+        </section>
+
+        <div class="clearfix"></div>
+    </div>
+
+    <footer id="footer">
+        <div class="left-full-layout">
+            <p>
+                &copy; Master en frameworks de JavaScrip de Victor Robles
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
